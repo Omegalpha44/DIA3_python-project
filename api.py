@@ -19,10 +19,6 @@ model = load_model('model.h5')
 # Load the logistic regression model.
 model_2 = LogisticRegression()
 best_params = {'C': 1121}
-
-#DBSCAN model
-model_3 = DBSCAN()
-
 # Load the dataset.
 dataset = np.load('dataset.npz')
 np_features = dataset['features']
@@ -78,7 +74,6 @@ def predict_scikit_kmeans():
     plt.savefig('plot_scikit-kmeans.png')
     print('plot generated')
     return jsonify({"message" : "plotting complete, check the following path to see it","path": "plot_scikit-kmeans.png"})
-
 
 @app.route('/scikit-log', methods=['GET'])
 def sci_predict_log():
@@ -136,7 +131,6 @@ def index():
                     "/plot": "sns pairplot, to see the correlation between the features",
                     "/default": "plot in 2D with PCA"
                     })
-
 
 if __name__ == '__main__':
     app.run(debug=True)
