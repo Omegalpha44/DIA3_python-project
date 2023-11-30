@@ -1,1 +1,17 @@
 DIA3 project - group Charles, Paul, Jeanne
+
+The goal is to create a model for our dataset that will predict if a consumer is going to buy something on the web or not, based on his/her previous behavior.
+
+The dataset is composed of 17 features and 1 target
+
+The dataset does not contain null values from the get go, but contains different types of data (int, float, object)
+
+We will first clean the dataset, then we will try to find the best model to predict the target.
+
+models tested : 
+- Logistic Regression
+- Kmeans
+- Dbscan
+- Deep Learning
+
+In the end, the best model seems to be the Deep learning model, with a precision of 0.97
